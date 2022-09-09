@@ -1,0 +1,24 @@
+label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFF;
+    padding-left: 10px;
+    line-height: 1.5;
+}
+body {
+    background-color: #202124;
+}
+input {
+    border-radius: 15px;
+    border: 2px solid #3c4043;
+    font-size: 18px;
+    line-height: 1.5;
+    outline: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 5px 10px 5px 10px;
+    background-color: #303134;
+}
+h1, h2, h3{
+  color: #FFF;
+}
