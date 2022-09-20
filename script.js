@@ -58,8 +58,8 @@ window.onload = function(){
     pyLegA.oninput = function(){
       pyLegB.oninput = function(){
           
-          let unSimp = pyLegA.value * pyLegA.value + pyLegB.value * pyLegB.value;
-          simplifySqrt(unSimp, pyLegC, k);
+           pyLegC.value = pyLegA.value * pyLegA.value + pyLegB.value * pyLegB.value;
+          simplifySqrt(pyLegC, pyLegC, k);
           
       };
     };
