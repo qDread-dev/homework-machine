@@ -68,6 +68,7 @@ window.onload = function(){
         let aSquared = aFindB.value * aFindB.value;
         let cSquared = cFindB.value * cFindB.value;
         bFindB.value = cSquared - aSquared;
+          simplifySqrt(bFindB, bFindB, k);
       };
     };
 
