@@ -1,4 +1,6 @@
 window.onload = function(){
+    let basicInput = document.getElementById('equation');
+    let basicOutput = document.getElementById('output');
     let exSqrtInput = document.getElementById('sqrtIn');
     let exSqrtOutput = document.getElementById('sqrtOut');
     let pyLegA = document.getElementById('pyLegA');
@@ -7,7 +9,8 @@ window.onload = function(){
     let aFindB = document.getElementById('aFindB');
     let bFindB = document.getElementById('bFindB');
     let cFindB = document.getElementById('cFindB');
-
+    let simpSqrtInput = document.getElementById('sqrtInput');
+    let simpSqrtOutput = document.getElementById('sqrtOutput');
     let k = 1;
 
     function simplifySqrt(simpSqrtInput, simpSqrtOutput, k){
@@ -39,17 +42,12 @@ window.onload = function(){
       }
     };
 
-    document.getElementById('sqrtInput').oninput = function(){
-      let input = document.getElementById('sqrtInput');
-      let output = document.getElementById('sqrtOutput');
-      simplifySqrt(input, output, k);
-    }
-
+    simpSqrtInput.oninput = function(){
+      simplifySqrt(simpSqrtInput, simpSqrtOutput, k)
+    };
     
-    document.getElementById('equation').oninput = function(){
-      let input = document.getElementById('equation');
-      let output = document.getElementById('output');
-      output.value = eval(input.value);
+    basicInput.oninput = function(){
+      basicOutput.value = eval(basicInput.value);
     };
     
     exSqrtInput.oninput = function(){
