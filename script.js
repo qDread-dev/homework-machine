@@ -9,8 +9,7 @@ window.onload = function(){
     let aFindB = document.getElementById('aFindB');
     let bFindB = document.getElementById('bFindB');
     let cFindB = document.getElementById('cFindB');
-    let simpSqrtInput = document.getElementById('sqrtInput');
-    let simpSqrtOutput = document.getElementById('sqrtOutput');
+
     let k = 1;
 
     function simplifySqrt(simpSqrtInput, simpSqrtOutput, k){
@@ -42,9 +41,12 @@ window.onload = function(){
       }
     };
 
-    simpSqrtInput.oninput = function(){
-      simplifySqrt(simpSqrtInput, simpSqrtOutput, k)
-    };
+    document.getElementById('sqrtInput') = function(){
+      let input = document.getElementById('sqrtInput');
+      let output = document.getElementById('sqrtOutput');
+      simplifySqrt(input, output, k);
+    }
+
     
     basicInput.oninput = function(){
       basicOutput.value = eval(basicInput.value);
