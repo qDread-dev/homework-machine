@@ -1,6 +1,4 @@
 window.onload = function(){
-    let basicInput = document.getElementById('equation');
-    let basicOutput = document.getElementById('output');
     let exSqrtInput = document.getElementById('sqrtIn');
     let exSqrtOutput = document.getElementById('sqrtOut');
     let pyLegA = document.getElementById('pyLegA');
@@ -41,15 +39,17 @@ window.onload = function(){
       }
     };
 
-    document.getElementById('sqrtInput') = function(){
+    document.getElementById('sqrtInput').oninput = function(){
       let input = document.getElementById('sqrtInput');
       let output = document.getElementById('sqrtOutput');
       simplifySqrt(input, output, k);
     }
 
     
-    basicInput.oninput = function(){
-      basicOutput.value = eval(basicInput.value);
+    document.getElementById('equation').oninput = function(){
+      let input = document.getElementById('equation');
+      let output = document.getElementById('output');
+      output.value = eval(input.value);
     };
     
     exSqrtInput.oninput = function(){
